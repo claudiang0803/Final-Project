@@ -128,8 +128,8 @@
           position: absolute;
           width: 150px;
           height: 150px;
-          background: white;
-          border: 1px white solid;
+          background: var(--bg-color);
+          border: 1px var(--bg-color) solid;
           top: 45%;
           left: 45%;
           border-radius: 50%;
@@ -306,6 +306,16 @@
         border: 8px var(--black) solid;
       }
       
+      .page1-redoutline{
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        top: 90%;
+        left: 15%;
+        z-index: 0;  
+        background: rgb(0,0,0,0);
+        border: 8px var(--red) solid; 
+      }
 
       .page1-orangebox{
         position: absolute;
@@ -315,10 +325,10 @@
         left: 35%;
         background: var(--orange);
         z-index: 2;
-        display: flex;
+				padding-top: 120px;
         color: var(--bg-color);
-        justify-content: center;
-        align-content: center;
+        text-align: center;
+        font-size: 40px;
         animation: orange-extend 2s ease-in-out /*delay*/ infinite alternate
       }
 
@@ -450,6 +460,7 @@
         <div class="page1-greenpath2"></div>
         <div class="page1-overlay">✿</div>
         <div class="page1-blackoutline"></div>
+        <div class="page1-redoutline"></div>
         <div class="page1-orangebox">
         <h1>
           WOO
