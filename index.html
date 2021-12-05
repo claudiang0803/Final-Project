@@ -108,6 +108,32 @@
             z-index: 4
           }
       
+      
+      .faux-green{
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 45%;
+        left: 45.1%;
+        background: rgb(0,0,0,0);
+        border-radius:50%;
+        border: 30px solid var(--green);
+        border-top: rgb(0,0,0,0);
+        border-right: rgb(0,0,0,0);
+        border-left: rgb(0,0,0,0);
+        z-index: 10
+      }
+      
+      .faux-green2{
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 61%;
+        left: 45.1%;
+        background: var(--green);
+        z-index: 10
+      }
+      
       .play{
           position: absolute;
           width: 150px;
@@ -141,21 +167,6 @@
           opacity: 1;
           z-index:
         }
-        
-        20%{
-          opacity: 1;
-        }
-        
-        30%{
-          opacity:1;
-          z-index:3
-          
-        }
-        
-        35%{
-          opacity: 1;
-        }
-        
         
         100%{
           opacity: 1;
@@ -194,9 +205,11 @@
         top: 20%;
         left: 40%;
         background: var(--black);
-        z-index: 2  
+        z-index: 2;
       }
       
+    
+  
       .page1-blackpath{
         position: absolute;
         width: 150px;
@@ -205,6 +218,17 @@
         left: 30%;
         z-index: 8;  
         background: var(--black);
+        animation: black1 2s infinite
+      }
+      
+        @keyframes black1{
+        0%{
+          width: 0px
+        }
+      
+        100%{
+          width: -150px
+        }
       }
       
       .page1-blackpath2{
@@ -233,12 +257,16 @@
         height: 8px;
         top: 57%;
         left: 46.7%;
-        background: var(--green);
-        z-index: 2  
+        background: rgb(0,0,0,0);
+        border-top: 8px dashed var(--green);
+        z-index: 2;
+        animation: green1 2s infinite ease-out
       }
       
+      
+      
             
-      .page1-greenpath2{
+    /*  .page1-greenpath2{
         position: absolute;
         width: 8px;
         height: 83px;
@@ -246,6 +274,28 @@
         left: 66.5%;
         background: var(--green);
         z-index: 2  
+      }*/
+      
+      
+      @keyframes green1{
+        0%{
+          transform: translateX(0)
+        }
+        
+        25%{
+          transform: translateX(0.25)
+        }
+        
+        50%{
+          width: 300px
+        }
+      
+        100%{
+          width: 300px;
+          height: 83px;
+         /* border-top: (rgb(0,0,0,0));
+          border-right: (var(--green)) */
+        }
       }
       
 
@@ -265,14 +315,37 @@
       .page1-orangebox{
         position: absolute;
         width: 400px;
-        height: 400px;
+        height: 100px;
         top: 105%;
         left: 35%;
         background: var(--orange);
-        z-index: 2  
+        z-index: 2;
+        animation: orange-extend 2s infinite
       }
       
-      .page2-orangebox{
+      
+      @keyframes orange-extend{
+        0%{
+          height: 100px;
+        }
+        
+        25%{
+          height: 25%;
+        }
+        50%{
+          height: 50%;
+        }
+        75%{
+          height: 75%;
+        }
+        
+			  100%{
+          height: 100%
+        }
+      }
+  
+      
+      /*.page2-orangebox{
         position: absolute;
         width: 400px;
         height: 400px;
@@ -280,7 +353,7 @@
         left: 35%;
         background: var(--orange);
         z-index: 2  
-      }
+      }*/
       
       .page2-blackoutline{
         position: absolute;
@@ -337,6 +410,8 @@
         <div class="container start-box-orange-outline"></div>
         <div class="container start-box-green-outline"></div>
         <div class="container start-box-black-outline"></div>
+        <div class="container faux-green"></div>
+        <div class="container faux-green2"></div>
         <div class="play"></div>
         <div class="start-orangepath"
 
