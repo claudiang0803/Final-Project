@@ -50,7 +50,7 @@
         top: 30%;
         left: 35%;
         background: var(--green);
-        z-index: 0
+        z-index: 3
         }
 
         .start-box-red{
@@ -105,7 +105,7 @@
             border: 8px var(--black) solid;
             top: 26%;
             left: 32%;
-            z-index: 1
+            z-index: 4
           }
       
       .play{
@@ -139,58 +139,42 @@
       @keyframes scroll-down{
         0%{
           opacity: 1;
-          
+          z-index:
         }
         
         20%{
           opacity: 1;
-          
         }
         
         30%{
-          opacity:0.5;
+          opacity:1;
+          z-index:3
           
         }
         
         35%{
-          opacity: 0;
+          opacity: 1;
         }
         
         
         100%{
-          opacity: 0;
+          opacity: 1;
           top: 90%;
         }
       }
       
-        
       
-      @keyframes scroll-down{
-        0%{
-          opacity: 1;
+      .start-orangepath{
+        position: absolute;
+        width: 8px;
+        height: 370px;
+        background: var(--orange);
+        top: 82.8%;
+        left: 50%;
+        z-index: 5
           
-        }
-        
-        20%{
-          opacity: 1;
-          
-        }
-        
-        30%{
-          opacity:0.5;
-          
-        }
-        
-        35%{
-          opacity: 0;
-        }
-        
-        
-        100%{
-          opacity: 0;
-          top: 90%;
-        }
-      } 
+      }
+  
       
       
       .page1-blackbox{
@@ -203,6 +187,27 @@
         z-index: 2  
       }
       
+      .page1-blackpath{
+        position: absolute;
+        width: 150px;
+        height: 8px;
+        top: 35%;
+        left: 30%;
+        z-index: 8;  
+        background: var(--black);
+      }
+      
+      .page1-blackpath2{
+        position: absolute;
+        width: 8px;
+        height: 189px;
+        top: 35%;
+        left: 30%;
+        z-index: 8;  
+        background: var(--black);
+      }
+      
+      
       .page1-greenbox{
         position: absolute;
         width: 400px;
@@ -212,6 +217,29 @@
         background: var(--green);
         z-index: 2  
       }
+      
+      .page1-greenpath{
+        position: absolute;
+        width: 200px;
+        height: 8px;
+        top: 55%;
+        left: 20%;
+        background: var(--green);
+        z-index: 2  
+      }
+      
+            
+      .page1-greenpath2{
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        top: 55%;
+        left: 20%;
+        background: var(--green);
+        z-index: 2  
+      }
+      
+
       
       .page1-blackoutline{
         position: absolute;
@@ -223,6 +251,10 @@
         background: rgb(0,0,0,0);
         border: 8px var(--black) solid;
       }
+      
+
+      
+      
       
       .page1-orangebox{
         position: absolute;
@@ -299,10 +331,9 @@
         <div class="container start-box-orange-outline"></div>
         <div class="container start-box-green-outline"></div>
         <div class="container start-box-black-outline"></div>
-        
-        <a href="#page1">
-        	<div class="play"></div>
-        </a>
+        <div class="play"></div>
+        <div class="start-orangepath"
+
         
       </div>
  
@@ -311,7 +342,11 @@
     <section id="page1">
     	<div class="container"> 
         <div class="page1-blackbox"></div>
+        <div class="page1-blackpath"></div>
+        <div class="page1-blackpath2"></div>
         <div class="page1-greenbox"></div>
+        <div class="page1-greenpath"></div>
+        <div class="page1-greenpath2"></div>
         <div class="page1-blackoutline"></div>
         <div class="page1-orangebox"></div>
       </div>
