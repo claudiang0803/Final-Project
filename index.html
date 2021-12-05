@@ -148,7 +148,7 @@
         transform: rotate(45deg);
         border-top: transparent;
         border-left: transparent;
-        animation: scroll-down 2s ease-in /*delay*/ infinite alternate;
+        animation: scroll-down 2s ease-in-out /*delay*/ infinite alternate;
        /* animation-delay: 6s;*/
         
       }
@@ -172,7 +172,7 @@
         top: 82.8%;
         left: 50%;
         z-index: 5;
-        animation: orange1 2s ease-in /*delay*/ infinite alternate
+        animation: orange1 2s ease-in-out /*delay*/ infinite alternate
           
       }
       
@@ -207,7 +207,7 @@
         left: 40%;
         z-index: 8;  
         background: var(--black);
-        animation: black1 1s ease-in /*delay*/ infinite alternate
+        animation: black1 1s ease-in-out /*delay*/ infinite alternate
       }
       
         @keyframes black1{
@@ -279,18 +279,6 @@
       }
       
       
-            
-    /*  .page1-greenpath2{
-        position: absolute;
-        width: 8px;
-        height: 83px;
-        top: 57%;
-        left: 66.5%;
-        background: var(--green);
-        z-index: 2  
-      }*/
-      
-      
       @keyframes overlay1{
         0%{
           left: 42%
@@ -327,7 +315,7 @@
         left: 35%;
         background: var(--orange);
         z-index: 2;
-        animation: orange-extend 2s ease-in /*delay*/ infinite alternate
+        animation: orange-extend 2s ease-in-out /*delay*/ infinite alternate
       }
 
       @keyframes orange-extend{
@@ -361,7 +349,49 @@
         background: var(--green);
         z-index: 2  
       }
+     
+      .page2-blackpath{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 98%;
+        left: 44%;
+        background: rgb(0,0,0,0);
+        border-right: 8px solid var(--black);
+        border-bottom: 8px solid var(--black);
+        z-index: -1;
+      }   
+        
+     .page2-overlay{
+      	position: absolute;
+        width: 70px;
+        height: 70px;
+        top: 95%;
+        left: 61%;
+        border: 8px solid var(--black);
+        background: var(--bg-color);
+        color: var(--red);
+        font-size: 50px;
+        text-align: center;
+        z-index: 8;
+        animation: overlay2 2s ease-in-out /*delay*/ infinite alternate
+      }
       
+      @keyframes overlay2{
+        0%{
+          left: 61%
+        }
+        
+        75%{
+          left: 61%;
+          top: 125%
+        }
+        
+        100%{
+          left: 55%;
+          top: 125%
+        }
+      } 
       .page2-redbox{
         position: absolute;
         width: 200px;
@@ -425,6 +455,8 @@
     	<div class="container"> 
         <div class="page2-orangebox"></div>
       	<div class="page2-blackoutline"></div>
+        <div class="page2-blackpath"></div>
+        <div class="page2-overlay">❀</div>
         <div class="page2-greenbox"></div>
 				<div class="page2-redbox"></div>
       </div>
