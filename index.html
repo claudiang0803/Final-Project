@@ -133,8 +133,8 @@
           top: 45%;
           left: 45%;
           border-radius: 50%;
-          z-index: 6;
-          cursor:pointer
+          z-index: -9;
+          cursor: pointer
         }
       
       .play::before{
@@ -197,7 +197,14 @@
         z-index: 2;
       }
       
-    
+      .page1-blackbox-overlay{
+        position: absolute;
+        z-index: 3;
+        color: var(--bg-color);
+        text-align: center;
+        opacity: 1
+      } 
+  
   
       .page1-blackpath{
         position: absolute;
@@ -205,9 +212,9 @@
         height: 8px;
         top: 35%;
         left: 40%;
-        z-index: 8;  
+        z-index: -8;  
         background: var(--black);
-        animation: black1 1s ease-in-out /*delay*/ infinite alternate
+        animation: black1 2s ease-in-out /*delay*/ infinite alternate
       }
       
         @keyframes black1{
@@ -225,18 +232,17 @@
         height: 189px;
         top: 35%;
         left: 30%;
-        z-index: 8;  
+        z-index: -1;  
         background: var(--black);
-        animation: black2 1s infinite ease-out 5s
+        animation: black2 2s infinite ease-out alternate
       }
       
       @keyframes black2{
         0%{
-          height: 0%;
+          top:54%
         }
-        
 			  100%{
-          height: 20%
+          top: 35%
         }
       
       } 
@@ -443,16 +449,22 @@
         <div class="container faux-green"></div>
         <div class="container faux-green2"></div>
         <div class="play"></div>
-        <div class="start-orangepath"
-
+        <div class="start-orangepath"></div>
+  		</div>
         
-      </div>
  
     </section> 
     
     <section id="page1">
     	<div class="container"> 
         <div class="page1-blackbox"></div>
+          <div class="page1-blackbox page1-blackbox-overlay">
+            <h2>GRAPHIC DESIGN</h2>
+            <p>
+            Although this was by far one of the hardest projects I've undertaken
+           	and I admittedly got pretty frustrated halfway, I was never bored and it felt like I could keep being engrossed in this project regardless of how much time I had already spent!
+            </p>
+          </div>
         <div class="page1-blackpath"></div>
         <div class="page1-blackpath2"></div>
         <div class="page1-greenbox"></div>
