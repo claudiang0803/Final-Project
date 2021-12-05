@@ -118,7 +118,7 @@
           left: 45%;
           border-radius: 50%;
           z-index: 6;
-          cursor: pointer
+          cursor:pointer
         }
       
       .play::before{
@@ -127,28 +127,35 @@
         height: 60px;
         width: 60px;
         top: 16%;
-        left: 22%;
+        left: 24%;
         border: 20px solid var(--orange);
         transform: rotate(45deg);
         border-top: transparent;
         border-left: transparent;
-        animation: scroll-down 1s ease-in-out infinite;
-        cursor: pointer
+        animation: scroll-down 2s infinite;
+       /* animation-delay: 6s;*/
       }
       
       @keyframes scroll-down{
         0%{
-          opacity: 0;
-          
-        }
-        30%{
           opacity: 1;
           
         }
         
-        60%{
+        20%{
           opacity: 1;
+          
         }
+        
+        30%{
+          opacity:0.5;
+          
+        }
+        
+        35%{
+          opacity: 0;
+        }
+        
         
         100%{
           opacity: 0;
@@ -184,6 +191,7 @@
     
     <section id="page1">
     	<div class="container"> 
+        <div class="line-down"></div>
         <h1>
           This is sec 2
         </h1>
